@@ -1,0 +1,525 @@
+@import "variables";
+
+//Inicio estilos generales
+* {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+a:link, a:visited, a:active{
+  text-decoration: none;
+}
+
+html{
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+.title-component-ctn{
+  @include mq($mw-1280){
+    padding-bottom: .2rem;
+    background-color: #F2F2F2;
+    padding-left: 1rem;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.title-component{
+  font-family: $ft-sec;
+  letter-spacing: 1px;
+  color: $cl-prin;
+  font-weight: bold;
+  text-shadow:  0px -1px 1px $cl-prin;
+  width: 100%;
+  font-size: 1.2rem;
+  text-indent: .5rem;
+  @include mq($mw-1280){    
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+  }
+}
+
+.title-and-navbar-ctn{
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  border-bottom: 2px solid $cl-prin;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  @include mq($mw-1920){    
+    height: 3.1rem; 
+  }
+}
+
+.sep-vertical{
+  width: 2px;
+  height: 80%;
+  background-color: $cl-prin;
+  margin-right: .5rem;
+}
+
+.searchs-ctn{
+  display: flex;
+  height: 100%;
+  width: 70%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-icons-ctn{
+  @include mq($mw-1280){
+    width: 50%;
+    height: 3rem;
+    background-color: #F2F2F2;
+    position: relative;
+    border-bottom: 2px solid $cl-prin;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 1rem;
+  }
+}
+
+
+
+//Fin estilos generales
+
+.ctn-padre{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+
+//Inicio Estilos Modificadores de PrimeNG
+
+.p-accordion .p-accordion-header .p-accordion-header-link{
+  font-family: $ft-sec !important;
+  font-size: .9rem;
+  letter-spacing: 1px;
+  font-weight: lighter !important;
+  border-bottom-color: #0066AD !important;
+ 
+}
+
+.p-accordion-header-link:focus{
+  outline: none !important;
+  box-shadow: unset !important;
+
+}
+
+.p-accordion-header-text{
+  color: $cl-nov !important;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.p-accordion-tab-active{
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.pi-chevron-right:before, .pi-chevron-down:before{
+  color: $cl-prin !important;
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+//Fin Estilos Modificadores de PrimeNG
+
+input[type=file]{
+  color: transparent;
+}
+
+
+//Botones Principio
+
+.btn-white{
+  width: 5rem;
+  height: 2rem;
+  margin-right: .5rem;
+  border: 2px solid $cl-prin;
+  border-radius: 6px;
+  background-color: $cl-sec;
+  color: $cl-prin;
+  box-shadow: $shadow2;      
+  font-family: $ft-sec;
+  font-size: .9rem;
+  letter-spacing: 1px; 
+  font-weight: bold;
+  @include mq($mw-1280){
+      width: 6rem;      
+      transition: all .8s;
+      &:hover{
+        cursor: pointer;
+        background-color: $cl-prin;
+        color: $cl-sec;
+        transition: all .5s;
+      }
+    }
+}
+
+.btn-white-xl{
+  @include mq($mw-1280){
+    width: 8rem;
+  }
+  @include mq($mw-1920){    
+    width: 9rem;
+    height: 2.5rem; 
+    font-size: 1.2rem;
+  }
+}
+
+.btn-blue{
+  width: 6rem;
+    height: 2rem;
+    font-family: $ft-sec;
+    letter-spacing: 1px;
+    color: $cl-sec;
+    background-color: $cl-prin;
+    border: none;
+    border-radius: 4px;
+    box-shadow: $shadow2;
+  @include mq($mw-1280){
+    width: 8rem;
+    height: 2rem;
+    font-family: $ft-sec;
+    letter-spacing: 1px;
+    color: $cl-sec;
+    background-color: $cl-prin;
+    border: none;
+    border-radius: 4px;
+    box-shadow: $shadow2;
+    cursor: pointer;
+    transition: all .5s;
+    &:hover{
+      background-color: $cl-sec;
+      color: $cl-prin;
+      border: 2px solid $cl-prin;
+      transition: all .5s;
+    }
+  }
+  @include mq($mw-1920){    
+    width: 9rem;
+    height: 2.5rem; 
+    font-size: 1.2rem;
+  }
+}
+
+.btn-white:focus, .btn-white-xl:focus, .btn-blue:focus{
+  outline: none;
+}
+
+//Fin botones
+
+//Inicio estilos NOVEDADES
+
+.news-father-ctn{
+  @include mq($mw-1280){
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
+.news-box1-ctn{
+  @include mq($mw-1280){
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100%;
+    height: 20rem;
+    background-color: $cl-menu;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+}
+
+.news-box2-ctn{
+  @include mq($mw-1280){
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 100%;
+    height: 20rem;
+    background-color: $cl-menu;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.news-box3-ctn{
+  @include mq($mw-1280){
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 100%;
+    height: 20rem;
+    background-color: $cl-menu;
+  }
+}
+
+.news-box4-ctn{
+  @include mq($mw-1280){
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 100%;
+    height: 20rem;
+    background-color: $cl-menu;
+  }
+}
+
+.news-box-double-ctn{
+  @include mq($mw-1280){
+    grid-column: 1/3;
+    grid-row: 2/3;
+    width: 100%;
+    height: 20rem;
+    background-color: orange;
+  }
+}
+
+
+//fin estilos NOVEDADES
+
+//Inputs Styles
+// Quitar ojo de contraseña edge
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+//Labels a la par del input
+.label-text, .label-text2{
+  width: 12rem;
+  text-align: right;
+  font-family: $ft-prin;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: .9rem;
+  color: $cl-nov;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  @include mq($mw-1280){
+    width: 12rem;
+    text-align: right;
+    padding-bottom: .5rem;
+    padding-right: 1rem;
+    font-family: $ft-prin;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: .7rem;
+    color: $cl-nov;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  @include mq($mw-1366){
+    font-size: .9rem;
+  }
+  @include mq($mw-1920){    
+    font-size: 1rem;
+    &::placeholder{
+      font-size: 1rem;
+    }
+  }
+}
+
+.label-text2{
+    width: 100%;
+    grid-column: 1/2;
+    text-align: right;
+    padding-bottom: unset;
+    align-self: center;
+  @include mq($mw-1280){
+    width: 100%;
+    grid-column: 1/2;
+    text-align: right;
+    padding-bottom: unset;
+    align-self: center;
+  }
+  @include mq($mw-1366){
+    font-size: .8rem;
+  }
+}
+
+
+//Inputs a la par del label
+.form-input-text, .form-input-text2, .form-input-text3{
+    width: 15rem;
+    height: 1.5rem;
+    border: 1px solid $cl-prin;
+    text-indent: .5rem;
+    letter-spacing: 1px;
+    margin-bottom: .5rem;
+    font-family: $ft-sec;
+    font-size: .8rem;
+    color: $cl-nov;
+  @include mq($mw-1280){
+    width: 20rem;
+    height: 1.5rem;
+    border: 1px solid $cl-prin;
+    text-indent: .5rem;
+    letter-spacing: 1px;
+    margin-bottom: .5rem;
+    font-family: $ft-sec;
+    font-size: .8rem;
+    color: $cl-nov;
+  } 
+}
+
+
+.form-input-text::placeholder{
+  @include mq($mw-1920){
+    font-size: 2rem;
+  }
+}
+
+.max-input{
+  @include mq($mw-1280){
+    height: 2rem;
+    width: 26rem;
+  }
+  @include mq($mw-1920){
+    height: 2.8rem;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    &::placeholder{
+      font-size: 1.1rem !important;
+      letter-spacing: 1px;
+      color: $cl-nov;
+      text-indent: .5rem;
+    }
+  }
+}
+
+
+
+.form-input-text::placeholder, .form-input-text2::placeholder, .form-input-text3::placeholder{
+  @include mq($mw-1280){
+    font-family: $ft-prin;
+    font-size: .9rem;
+  }
+}
+
+.form-input-text:focus, .form-input-text2:focus{
+  outline: none;
+  border: 3px solid $cl-prin;
+}
+
+
+
+
+.form-date{
+  font-family: $ft-prin;
+    color: gray;
+    font-size: .9rem;
+    text-indent: .25rem;
+    text-align: left;
+  @include mq($mw-1280){
+    font-family: $ft-prin;
+    color: gray;
+    font-size: .9rem;
+    text-indent: .25rem;
+    text-align: left;
+  }
+}
+
+//input[type="date"]::-webkit-calendar-picker-indicator{
+//  display: none;
+//}
+
+.form-select, .form-select2{
+  width: 14rem;
+    color: gray;
+    outline: none;
+    font-family: $ft-prin;
+    font-size: .8rem;
+  @include mq($mw-1280){
+    width: 14rem;
+    color: gray;
+    outline: none;
+    font-family: $ft-prin;
+    font-size: .8rem;
+  }
+}
+
+.form-select2{
+  @include mq($mw-1280){
+    width: 12.5rem;
+  }
+}
+
+.form-select-option {
+  @include mq($mw-1280) {
+    font-family: $ft-prin;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    color: gray;
+  }
+}
+
+.title-no-label{
+  @include mq($mw-1280){
+    text-align: right !important;
+    font-family: $ft-prin !important;
+    font-size: .9rem !important;
+    letter-spacing: 1px !important;
+    color: $cl-nov !important;
+    font-weight: 400 !important;
+  }
+}
+
+.input-nov{
+  @include mq($mw-1280){
+    outline-color: $cl-prin !important;
+    text-indent: .5rem !important;
+    font-family: $ft-prin !important;
+    letter-spacing: 1px !important;
+    font-size: .8rem !important;
+    border-radius: 4px !important;
+    border: 1px solid $cl-prin !important;
+  }
+}
+
+.inputs-form-ctn .max-input{
+  width: 100%;
+}
+
+//Select a la par de label /input 3
+.form-select-option2, .form-input-text3{
+  width: 16rem;
+  @include mq($mw-1280){
+    width: 20.5rem;
+  }
+}
+
+//Borde error inputs
+.border-error{
+  @include mq($mw-1280){
+    border: 1px solid red;
+  }
+}
+
+//Cajas
+
+.box-father-ctn{
+  @include mq($mw-1366){
+    width: 100%;
+    overflow: hidden;
+  }
+}

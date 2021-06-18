@@ -1,0 +1,8 @@
+@import "../../../variables.scss";
+
+.adminstrator-ctn{
+    @include mq($mw-1024){
+        width: 100%;
+        overflow: hidden;
+    }
+}

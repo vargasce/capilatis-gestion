@@ -1,0 +1,17 @@
+<div class="title-and-navbar-ctn">
+    <app-title
+            [title]="'Nuevo Administrador'">
+    </app-title>
+</div>
+<div class="adminstrator-ctn">
+<app-administrator-data
+        (emitPermits)="eventPermits($event)"
+        (emitAdministrator)="eventAdministratorChild($event)"
+        [title]="'Carga de Nuevo Administrador'"
+></app-administrator-data>
+</div>
+<app-modal-custom
+            [dataModal] = "dataModal"
+>
+</app-modal-custom>
+

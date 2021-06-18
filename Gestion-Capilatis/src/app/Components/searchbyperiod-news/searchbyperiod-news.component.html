@@ -1,0 +1,16 @@
+<div class="searchbyperiod-father-ctn">
+    <div class="searchbyperiod-title-ctn">
+        <h4 class="searchbyperiod-title">
+            Buscar por Período
+        </h4>
+    </div>
+    <div class="searchbyperiod-main-ctn">
+        <h5 class="searchbyperiod-title-date title-no-label">
+            {{titlePeriod}}
+        </h5>
+        <input type="date" class="searchbyperiod-date input-nov" placeholder="--------- de ----"  [(ngModel)]="periodo">
+    </div>
+    <div class="searchbyperiod-footer-ctn">
+        <button type="button"  (click)="sendPeriod()" class="btn-blue">Buscar</button>
+    </div>
+</div>

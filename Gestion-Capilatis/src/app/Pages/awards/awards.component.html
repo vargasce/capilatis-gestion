@@ -1,0 +1,29 @@
+<div class="title-and-navbar-ctn">
+    <app-title
+            [title]="'Carga de Premios'"
+    ></app-title>
+
+    <app-modal-custom
+            [dataModal] = "dataModal"
+>
+</app-modal-custom>
+
+
+</div>
+
+<div class="news-father-ctn">
+    <div class="news-box1-ctn">
+        <app-searchbyperiod-news
+                [period]="'Período de Premios:'"
+        ></app-searchbyperiod-news>
+    </div>
+    <div class="news-box2-ctn">
+        <app-searchbyemp-sector-group-news></app-searchbyemp-sector-group-news>
+    </div>
+    <div class="news-box3-ctn">
+
+    </div>
+    <div class="news-box4-ctn">
+
+    </div>
+</div>

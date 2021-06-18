@@ -1,0 +1,262 @@
+@import "../../../variables.scss";
+
+.no-mostrar{
+    display: none;
+}
+
+.edit-admin-ctn{
+    @include mq($mw-1024){
+        width: 95%;
+        position: relative;
+        margin: 1.5rem auto;
+        background-color: $cl-menu;
+        border-radius: 6px;
+        border-top: 4px solid $cl-prin;
+        box-shadow: $shadow2;
+        padding-bottom: .5rem;
+    }
+}
+
+.edit-admin-title-ctn{
+    @include mq($mw-1024){
+        width: 100%;        
+        padding-top: 1rem;
+    }
+}
+
+.edit-admin-form-title-ctn{
+    @include mq($mw-1920){
+        grid-column: 1/6;
+        padding: 1rem 0;
+        border-bottom: 1px solid $cl-prin;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+.edit-admin-title, .edit-admin-form-title{
+    @include mq($mw-1024){
+        font-family: $ft-prin;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        color: $cl-nov;
+        text-align: center;
+    }
+    @include mq($mw-1920){    
+        font-size: 1.5rem;
+    }
+}
+
+.sep{
+    @include mq($mw-1024){
+        width: 100%;
+        border-bottom: 1px solid $cl-prin;
+        margin-top: 1rem;
+    }
+}
+
+.edit-admin-form-ctn{
+    @include mq($mw-1024){
+        width: 100%;
+        
+        display: grid;
+        grid-template-columns: 2% 47% 2% 47% 2%;
+        justify-items: stretch;
+        align-items: center;
+    }
+}
+
+.inputs-form-ctn{
+    @include mq($mw-1024){
+        display: flex;
+        flex-direction: column;
+        padding: .5rem 0;        
+        &:nth-child(odd){
+            grid-column: 2/3;
+            
+        }
+        &:nth-child(even){
+            grid-column: 4/5;
+            
+        }
+    }
+    @include mq($mw-1920){
+        display: grid;
+        grid-template-columns: 40% 60%;
+        align-items: center;
+    }
+}
+
+.form-label-edit{
+    @include mq($mw-1024){
+        font-family: $ft-prin;
+        font-size: 1rem;
+        color: $cl-nov;
+        letter-spacing: 2px;
+        line-height: 2rem;
+    }
+    @include mq($mw-1920){
+        font-size: 1.2rem;
+    }
+}
+
+.form-input-edit{
+    @include mq($mw-1024){
+        width: 100%;
+        height: 2rem;
+        border: 1px solid $cl-prin;
+        &:focus{
+            outline: 2px solid $cl-ter ;
+        }        
+    }
+}
+
+.form-btns-ctn{
+    @include mq($mw-1024){
+    width: 100%;
+    height: 100%;      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    }
+}
+
+.form-legend-ctn{
+    width: 90%;
+    height: 100%;    
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq($mw-1366){
+        width: 100%;
+        height: 100%;    
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 1rem 0;
+    }
+}
+
+.form-legend-text{  
+    font-family: $ft-sec;
+    font-size: .8rem;
+    letter-spacing: 1px;
+    color: $cl-nov;
+text-align: center;
+@include mq($mw-1366){
+    text-indent: 1rem;    
+    font-size: 1rem;
+    }
+}
+
+.permisos-ctn{
+    @include mq($mw-1920){
+        grid-column: 2/5;
+        display: grid;
+        grid-template-columns: 1fr 3rem 1fr 3rem 1fr;        
+        margin-bottom: 1rem;
+    }
+}
+
+.prueba{
+    @include mq($mw-1920){
+        margin-bottom: 1rem;
+    }
+}
+
+.prueba:nth-child(1){
+    @include mq($mw-1920){
+        grid-column: 1/2;
+        
+    }
+}
+
+.prueba:nth-child(2){
+    @include mq($mw-1920){
+        grid-column: 3/4;
+        
+    }
+}
+
+.prueba:nth-child(3){
+    @include mq($mw-1920){
+        grid-column: 5/6;        
+    }
+}
+
+.prueba:nth-child(4){
+    @include mq($mw-1920){
+        grid-column: 1/2;        
+    }
+}
+
+.prueba:nth-child(5){
+    @include mq($mw-1920){
+        grid-column: 3/4;
+        
+    }
+}
+
+.prueba:nth-child(6){
+    @include mq($mw-1920){
+        grid-column: 5/6;
+        
+    }
+}
+
+.prueba:nth-child(7){
+    @include mq($mw-1920){
+        grid-column: 1/2;
+        
+    }
+}
+
+.acceso-total-ctn{
+    @include mq($mw-1920){
+        display: flex;
+    }
+}
+
+
+.link-menu-ctn{
+    padding-bottom: .5rem;
+}
+
+
+.title-item{
+    font-family: $ft-prin;
+    margin: 0 2rem 0 0;
+    position: relative;
+    font-size: 1rem;
+    color: $cl-nov;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+.title-item:before{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid gray;
+    right: -2rem;
+    top: 1px;
+    border-radius: 3px;
+}
+
+[type="checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"]:checked + .title-item:before{
+    content: '\ea10';
+    font-family: icomoon;
+    border: 2px solid $cl-prin;
+    font-size: 1rem;
+    line-height: 1;
+    color: $cl-prin;
+    text-indent: 1px;
+}

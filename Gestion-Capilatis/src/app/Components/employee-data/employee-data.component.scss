@@ -1,0 +1,698 @@
+@import "../../../variables";
+
+
+.employee-form-ctn{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 17rem 15rem 70rem 30rem 5rem 5rem;
+  overflow: hidden;
+  margin-top: .5rem;
+  @include mq($mw-1280){    
+    margin-top: 2rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 15rem 30rem 12rem 5rem 3rem;
+  }
+  @include mq($mw-1366){
+    grid-template-rows: 17rem 31rem 13rem 5rem 3rem;
+  }
+  @include mq($mw-1920){    
+    margin-top: 2rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 18rem 33rem 15rem 5rem 3rem;
+  }
+}
+
+.employee-img-ctn{
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+}
+
+.img-emp{
+  width: 10rem;
+  height: 11rem;
+  background-color: #EFF5FB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $cl-prin;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  box-shadow: $shadow2;  
+}
+
+.img-user{
+  width: 12rem;
+    height: 14rem;
+    border: 2px solid $cl-prin;
+    border-radius: 6px;
+  @include mq($mw-1280){
+    width: 12rem;
+    height: 14rem;
+    border: 2px solid $cl-prin;
+    border-radius: 6px;
+  }
+}
+
+
+.icon-user-plus{
+  font-size: 5rem;
+  color: $cl-sec;
+}
+
+
+.employee-datosP-ctn{
+  width: 100%;
+  height: 100%;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  
+  @include mq($mw-1280){
+    grid-column: 2/4;
+    grid-row: 1/2;
+    
+  }
+}
+
+.input-datosp-ctn{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 90%;
+  align-items: center;  
+  @include mq($mw-1280){
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: .4rem;
+    margin-left: 4rem;
+  }
+}
+
+
+.double-input-ctn{
+  display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  @include mq($mw-1280){
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+}
+
+.employee-datosL-ctn{
+  grid-column: 1/2;
+    grid-row: 3/4;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 5% repeat(3,20%) 5% repeat(3,10%);
+    grid-template-columns: 100%;
+  @include mq($mw-1280){
+    grid-column: 1/4;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 8% 52% 10% 28%;
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+.title-datosL-ctn{
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 100%;
+  height: 100%; 
+  text-align: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mq($mw-1280){
+    grid-column: 1/4;
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: .5rem;
+    border-bottom: 1px solid gray;
+
+  }
+}
+
+.title-datosL{
+  font-family: $ft-sec;
+  letter-spacing: 1px;
+  color: $cl-prin;
+  font-size: 1.5rem;
+  text-align: center;
+  @include mq($mw-1280){
+    font-family: $ft-sec;
+    letter-spacing: 1px;
+    color: $cl-prin;
+    font-size: 1rem;
+  }
+  @include mq($mw-1920){    
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+  }
+}
+
+
+
+
+.title-datosL2-ctn{
+  grid-column: 1/2;
+  grid-row: 5/6;
+  @include mq($mw-1280){
+    grid-column: 1/4;
+    grid-row: 3/4;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+  }
+}
+
+.datosL-col1-ctn{
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  
+  @include mq($mw-1280){
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.datosL-col2-ctn{
+  grid-column: 1/2;
+    grid-row: 3/4;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  @include mq($mw-1280){
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.datosL-col3-ctn{
+  grid-column: 1/2;
+    grid-row: 4/5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  @include mq($mw-1280){
+    grid-column: 3/4;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.datosL-col4-ctn{
+  grid-column: 1/2;
+    grid-row: 6/7;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  @include mq($mw-1280){
+    grid-column: 1/2;
+    grid-row: 4/5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: .5rem;
+  }
+}
+
+
+.datosL-col5-ctn{
+  grid-column: 1/2;
+    grid-row: 7/8;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  @include mq($mw-1280){
+    grid-column: 2/3;
+    grid-row: 4/5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: .5rem;
+  }
+}
+
+
+.datosL-col6-ctn{
+  grid-column: 1/2;
+    grid-row: 8/9;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  @include mq($mw-1280){
+    grid-column: 3/4;
+    grid-row: 4/5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: .5rem;
+  }
+}
+
+.input-datosL-ctn{
+  display: grid;
+  width: 90%;
+  grid-template-columns: 35% 65%;
+  margin-top: .5rem;
+  @include mq($mw-1280){
+    width: 100%;
+    height: 2.2rem;
+    display: grid;
+    grid-template-columns: 35% 65%;
+
+  }
+}
+
+.employee-docs-ctn{
+  grid-row: 4/5;
+    grid-column: 1/2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 20% 40% 40%;
+    grid-template-columns: 50% 50%;
+  @include mq($mw-1280){
+    grid-row: 3/4;
+    grid-column: 1/4;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 25% 75%;
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
+.title-docs-ctn{
+  grid-column: 1/5;
+    grid-row: 1/2;
+    text-align: center;
+    align-self: center;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid gray;
+  @include mq($mw-1280){
+    grid-column: 1/5;
+    grid-row: 1/2;
+    text-align: center;
+    margin-top: 1rem;
+    border-bottom: 1px solid gray;
+  }
+}
+
+.docs-afip{
+  grid-column: 1/2;
+    grid-row: 2/3;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  @include mq($mw-1280){
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.docs-dnifr{
+  grid-column: 2/3;
+    grid-row: 2/3;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  @include mq($mw-1280){
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.docs-dnido{
+  grid-column: 1/2;
+    grid-row: 3/4;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  @include mq($mw-1280){
+    grid-column: 3/4;
+    grid-row: 2/3;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.docs-cuil{
+  grid-column: 2/3;
+    grid-row: 3/4;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  @include mq($mw-1280){
+    grid-column: 4/5;
+    grid-row: 2/3;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.title-arch{
+  font-family: $ft-sec;
+    font-size: .9rem;
+    font-weight: 400;
+    color: $cl-prin;
+    letter-spacing: 1px;
+    padding-bottom: .5rem;
+  @include mq($mw-1280){
+    font-family: $ft-sec;
+    font-size: .9rem;
+    font-weight: 400;
+    color: $cl-prin;
+    letter-spacing: 1px;
+    padding-bottom: .5rem;
+  }
+  @include mq($mw-1920){    
+    font-size: 1.2rem; 
+  }
+}
+
+.form-legend-ctn{
+  width: 90%;
+    height: 100%;
+    grid-column: 1/5;
+    grid-row: 5/6;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  @include mq($mw-1280){
+    width: 100%;
+    height: 100%;
+    grid-column: 1/4;
+    grid-row: 5/6;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+  }
+}
+
+.form-legend-text{  
+    font-family: $ft-sec;
+    font-size: .8rem;
+    letter-spacing: 1px;
+    color: $cl-nov;
+    text-align: center;
+  @include mq($mw-1280){
+    text-indent: 3rem;    
+    font-size: .9rem;    
+  }
+  @include mq($mw-1366){
+    font-size: 1rem;
+  }
+}
+
+.form-btns-ctn{
+  width: 100%;
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 6/7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  @include mq($mw-1280){
+    width: 100%;
+    height: 100%;
+    grid-column: 1/4;
+    grid-row: 4/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.btn-img-emp{
+  @include mq($mw-1280){
+    margin-bottom: .2rem;
+  }
+}
+
+.btn-car-arch-ctn{
+  background-color: $cl-prin;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 8rem;
+    height: 2.5rem;
+    position: relative;
+  @include mq($mw-1280){
+    background-color: $cl-prin;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 8rem;
+    height: 2.5rem;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+      background-color: $cl-ter;
+    }
+  }
+  @include mq($mw-1920){    
+    width: 9rem;
+    height: 2.7rem;
+  }
+}
+
+.btn-car-arch-text{
+  font-family: $ft-prin;
+    color: $cl-sec;
+  @include mq($mw-1280){
+    font-family: $ft-prin;
+    color: $cl-sec;
+    cursor: pointer;
+  }
+  @include mq($mw-1920){    
+    font-size: 1.1rem;
+  }
+}
+
+.btn-car-arch{
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  @include mq($mw-1280){
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer; 
+    z-index: 100;   
+  }
+}
+
+.form-check-ctn{
+  width: 11rem;
+    height: 100%;
+    grid-column: 2/3;
+    align-self: center;
+    display: flex;
+    align-items: center;
+  @include mq($mw-1280){
+    width: 11rem;
+    height: 100%;
+    grid-column: 2/3;
+    align-self: center;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.form-check{
+  width: 1rem;
+    height: 1rem;
+  @include mq($mw-1280){
+    width: 1rem;
+    height: 1rem;
+
+  }
+}
+
+.form-check2{
+  margin-right: .5rem;
+    width: 1rem;
+    height: 1rem;
+  @include mq($mw-1280){
+    margin-right: .5rem;
+    width: 1rem;
+    height: 1rem;
+
+  }
+}
+
+.icon-tabler{
+  @include mq($mw-1280){
+    margin: .5rem;
+  }
+}
+
+.icon-tabler-point{
+  @include mq($mw-1280){
+    margin: 0;
+  }
+}
+
+
+.form-input-text2, .form-input-text3{
+    width: 14rem;
+    grid-column: 2/3;
+    align-self: center;
+    margin-bottom: unset;
+  @include mq($mw-1280){
+    width: 13rem;
+    grid-column: 2/3;
+    align-self: center;
+    margin-bottom: unset;
+  }
+  @include mq($mw-1920){    
+    width: 18rem;
+    height: 2rem;
+    font-size: 1rem;
+    &::placeholder{
+      font-size: 1rem;
+    }
+  }
+}
+
+.form-input-text3{
+  @include mq($mw-1280){
+    width: 11.5rem;
+  }
+  @include mq($mw-1920){    
+    width: 16.5rem; 
+  }
+}
+
+
+.max-input-dataE{
+  @include mq($mw-1280){
+    width: 25rem;
+  }
+  @include mq($mw-1366){
+    width: 28rem;
+    height: 1.8rem;
+  }
+  @include mq($mw-1920){
+    width: 35rem;
+    height: 2rem;
+    font-size: 1rem;
+    &::placeholder{
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<div class="title-and-navbar-ctn">
+	<app-title
+			[title]="'Lista de Empleados Inactivos'"
+	></app-title>
+	<app-search-custom
+		(searchDescription)="searchDescription($event)"
+	></app-search-custom>
+</div> 
+
+
+<app-grid-emp-custom
+		[list] = "tabla"
+	  (fieldEvent)="verEmpleado($event)"
+		(next)="nextPages($event)"
+		(back)="backPages($event)"
+></app-grid-emp-custom>
+
+<app-modal-custom
+            [dataModal] = "dataModal"
+>
+</app-modal-custom>
+

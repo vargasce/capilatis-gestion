@@ -1,0 +1,113 @@
+@import "../../../variables";
+
+.searchbyemployee-father-ctn{
+  @include mq($mw-1024){
+    width: 35rem;
+    height: 18rem;
+    background-color: #FDFCFC;
+    display: grid;
+    grid-template-rows: 3rem 10rem 5rem;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    border-radius: 6px;
+    border-top: 4px solid $cl-prin;
+    box-shadow: $shadow2;
+  }
+}
+
+.searchbyemployee-title-ctn{
+  @include mq($mw-1024){
+    grid-row: 1/2;
+    align-self: center;
+    padding-left: 1rem;
+  }
+}
+
+.searchbyemployee-title{
+  @include mq($mw-1024){
+    font-family: $ft-sec;
+    font-size: 1.4rem;
+    font-weight: lighter;
+    color: gray;
+    letter-spacing: 2px;
+   }
+}
+
+.searchbyemployee-main-ctn{
+  @include mq($mw-1024){
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 15% 5% 80%;
+    grid-template-rows: 2rem 1rem 2rem 1rem 2rem;
+    align-self: center;
+  }
+}
+
+.searchbyemployee-title-nameCli, .searchbyemployee-title-id, .searchbyemployee-title-nameEmp{
+  @include mq($mw-1024){
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;    
+  }
+}
+
+.searchbyemployee-select, .searchbyemployee-input-id, .searchbyemployee-input-nameEmp{
+  @include mq($mw-1024){
+    width: 90%;
+    height: 2rem;
+    margin-left: 1rem;    
+  }
+}
+
+.searchbyemployee-title-nameCli{
+  @include mq($mw-1024){
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+
+.searchbyemployee-select{
+  @include mq($mw-1024){
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+}
+
+.searchbyemployee-title-id{
+  @include mq($mw-1024){
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+}
+
+.searchbyemployee-input-id{
+  @include mq($mw-1024){
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+}
+
+.searchbyemployee-title-nameEmp{
+  @include mq($mw-1024){
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+}
+
+.searchbyemployee-input-nameEmp{
+  @include mq($mw-1024){
+    grid-column: 3/4;
+    grid-row: 5/6;
+  }
+}
+
+
+.searchbyemployee-footer-ctn{
+  @include mq($mw-1024){
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $cl-oct;
+  }
+}

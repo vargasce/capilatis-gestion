@@ -1,0 +1,27 @@
+<div class="searchbyemp-sector-father-ctn">
+    <div class="searchbyemp-sector-title-ctn">
+        <h4 class="searchbyemp-sector-title">
+            Filtrar Lista Empleados
+        </h4>
+    </div>
+    <div class="searchbyemp-sector-main-ctn">
+        <h5 class="searchbyemp-sector-title-nameCli title-no-label">
+            Sector:
+        </h5>
+        <select name="sector" id="sector" class="searchbyemp-sector-select input-nov" [(ngModel)]="sector" >
+            <option  value="-1" class="searchbyemp-sector-select">--Seleccione Sector--</option>
+            <option *ngFor="let item of selectsector" value="{{item.id}}" class="form-select-option">{{item.descripcion}}</option>
+        </select>
+        <h5 class="searchbyemp-sector-title-id title-no-label">
+            Grupo:
+        </h5>
+        <select name="grupo" id="grupo" class="searchbyemp-sector-select-group input-nov" [(ngModel)]="grupo">
+            <option  value="-1" class="searchbyemp-sector-select-group">--Seleccione Grupo--</option>
+            <option *ngFor="let item of selectgrupo" value="{{item.id}}" class="form-select-option">{{item.descripcion}}</option>
+        </select>
+    </div>
+    <div class="searchbyemp-sector-footer-ctn">
+        <button type="button" (click)="searchEvent()" class="btn-blue">Buscar</button>
+    </div>
+</div>
+

@@ -1,0 +1,63 @@
+<div class="modal-custom-ctn" *ngIf="ShowModal">
+    <div class="modal-custom-sub-ctn" (click)="toggleModal()" ></div>
+    <div class="modal-cumtom-box-ctn">
+        <div class="modal-header-ctn">
+            <div class="modal-logo-ctn"></div>
+            <div class="modal-close-ctn" (click)="toggleModal()" *ngIf="!ShowInput">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-x" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M10 10l4 4m0 -4l-4 4" />
+                </svg>
+            </div>
+        </div>
+        <div class="modal-main-ctn">
+            <p class="modal-main-text" >{{dataModal.message}}</p>
+            <div class="modal-login-ctn" *ngIf="ShowInput">
+                <div class="form-login-ctn">
+                    <div class="form-login-items">
+                        <h3 class="form-login-title">
+                            Iniciar sesión
+                        </h3>
+                    <form class="form-login" action="" name="loginForm" #loginForm="ngForm"  (ngSubmit)="loginPrueba(loginForm)" >
+                        <div class="form-input-text-ctn">
+                            <input type="text" name="user" #userForm class="form-input-text" placeholder="Usuario" #user="ngModel" [(ngModel)]="modelLogin.user" autocomplete="off" required >
+                            <div class="icon-text icon-user"></div>
+                        </div>
+                        <div class="form-input-pass-ctn">
+                            <input type="password" name="pass" #passForm class="form-input-pass" placeholder="Contraseña" #pass="ngModel" [(ngModel)]="modelLogin.pass" autocomplete="off" required />
+                            <div class="icon-text icon-lock"></div>
+                        </div>                        
+                        <div class="form-btn-ctn">
+                            <button type="submit"  class="form-btn" [disabled]="!loginForm.form.valid" >Ingresar</button>
+                        </div>                        
+                        <div class="form-error-ctn" *ngIf="errorLogin">
+                            <span class="form-error" #errorLoginForm >{{messageError}}</span>
+                        </div>
+                    </form>
+                    <div class="sep"></div>
+                    <div class="form-olv-pass-ctn">
+                        <p class="olv-pass">¿Desea salir?
+                            <br>Si lo hace los datos no guardados se perderán.
+                        </p>
+                    </div>
+                    <div class="sep"></div>    
+            </div>
+        </div>
+        <div class="modal-footer-ctn" *ngIf="!ShowInput">
+            <div class="modal-btn-close" (click)="toggleModal()">
+                <span class="modal-btn-close-text">
+                    Aceptar 
+                </span>
+            </div>
+        </div>
+       
+        <div class="modal-footer-ctn" *ngIf="ShowInput">
+            <div class="modal-btn-close" (click)="exitEvent()">
+                <span class="modal-btn-close-text">
+                    Salir 
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

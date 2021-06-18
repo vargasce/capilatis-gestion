@@ -1,0 +1,40 @@
+@import "../../../variables.scss";
+
+
+.search-date-input-ctn{
+    width: 30rem;
+    height: 2rem;
+    position: relative;
+    margin-right: .5rem;
+    display: flex;
+    align-items: center;
+}
+
+.buscador-date{
+    width: 12rem;
+    height: 100%;
+    text-indent: .5rem;
+    font-family: $ft-prin;
+    color: $cl-nov;
+    border: 1px solid $cl-prin;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    position: relative;
+    margin-right: .5rem;
+}
+
+.buscador-date:focus{
+    outline: none;
+    border: 2px solid $cl-ter ;
+}
+
+
+.btn-search-date{
+    width: 6rem;
+    height: 2rem;
+    box-shadow: none;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter:  invert(.5) drop-shadow(1px 1px $cl-prin);
+}

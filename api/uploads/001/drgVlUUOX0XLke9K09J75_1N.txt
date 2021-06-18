@@ -1,0 +1,6 @@
+Pagina Oficial de Vim : https://neovim.io/
+Chocolatey: https://chocolatey.org/install
+Vim-Plug: https://github.com/junegunn/vim-plug
+Plugin Minimalist: https://github.com/dikiaap/minimalist
+
+https://www.youtube.com/watch?v=9feYAyL3ZT0

@@ -1,0 +1,25 @@
+<div class="title-and-navbar-ctn">
+    <app-title
+            [title]="'Carga de Días de Estudio'"
+    ></app-title>
+</div>
+
+<div class="news-father-ctn">
+    <div class="news-box1-ctn">
+        <app-searchbyemployee-news></app-searchbyemployee-news>
+    </div>
+    <div class="news-box2-ctn">
+        <app-data-upload-news></app-data-upload-news>
+    </div>
+    <div class="news-box3-ctn">
+
+    </div>
+    <div class="news-box4-ctn">
+
+    </div>
+</div>
+
+<app-modal-custom
+            [dataModal] = "dataModal"
+>
+</app-modal-custom>

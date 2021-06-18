@@ -1,0 +1,20 @@
+<div class="dataupload-father-ctn">
+    <div class="dataupload-title-ctn">
+        <h4 class="dataupload-title">
+            Carga de Datos
+        </h4>
+    </div>
+    <div class="dataupload-main-ctn">
+        <h5 class="dataupload-title-date title-no-label">
+            Fecha de Novedad:
+        </h5>
+        <input type="date" name="date" class="dataupload-date input-nov" placeholder="--------- de ----" [(ngModel)]="date" >
+        <h5 class="dataupload-title-det title-no-label">
+            Detalle Novedad:
+        </h5>
+        <textarea rows="5"  cols="20" name="detail" class="dataupload-textarea input-nov" placeholder="Ingrese Novedad" [(ngModel)]="detail"></textarea>
+    </div>
+    <div class="dataupload-footer-ctn">
+        <button type="button" class="btn-blue" (click)="uploadEvent()">Cargar</button>
+    </div>
+</div>

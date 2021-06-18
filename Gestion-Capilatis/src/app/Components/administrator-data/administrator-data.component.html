@@ -1,0 +1,283 @@
+<div class="edit-admin-ctn">
+    <div class="edit-admin-title-ctn">
+        <h1 class="edit-admin-title">
+            {{titulo}}
+        </h1> 
+    </div>
+    <div class="sep"></div>
+    <form name="administratorDataForm" #administratorDataForm="ngForm" (ngSubmit)="sendAdministrator()" class="edit-admin-form-ctn" autocomplete="off">
+        <div class="inputs-form-ctn">
+            <div class="inputs-datosp-ctn">
+                <label for="" class="form-label-edit">Nombre:</label>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-point" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0066AD" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="4" />
+                </svg>
+            </div>            
+            <input type="text" #nombreForm name="nombre" class="form-input-text max-input" autocomplete="off" placeholder="Ingrese Nombre" #nombre="ngModel" [(ngModel)]="administratorModel.nombre">
+        </div>
+        <div class="inputs-form-ctn">
+            <div class="inputs-datosp-ctn">
+                <label for="" class="form-label-edit">Apellido:</label>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-point" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0066AD" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="4" />
+                </svg>
+            </div>            
+            <input type="text" #apellidoForm name="apellido" class="form-input-text max-input" autocomplete="off" placeholder="Ingrese Apellido" #apellido="ngModel" [(ngModel)]="administratorModel.apellido">
+        </div>
+        <div class="inputs-form-ctn">
+            <div class="inputs-datosp-ctn">
+                <label for="" class="form-label-edit">Email:</label>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-point" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0066AD" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="4" />
+                </svg>
+            </div>
+            <input type="email" #correoForm name="correo" class="form-input-text max-input" autocomplete="off" placeholder="Ingrese Correo" #correo="ngModel" [(ngModel)]="administratorModel.correo">
+        </div>
+        <div class="inputs-form-ctn">
+            <div class="inputs-datosp-ctn">
+                <label for="" class="form-label-edit">Nombre de Usuario:</label>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-point" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0066AD" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="4" />
+                </svg>
+            </div>            
+            <input type="text" #usuarioForm name="usuario" class="form-input-text max-input" autocomplete="off" placeholder="Ingrese Usuario" #usuario="ngModel" [(ngModel)]="administratorModel.usuario">
+        </div>
+        <div class="inputs-form-ctn">
+            <div class="inputs-datosp-ctn">
+                <label for="" class="form-label-edit">Clave:</label>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-point" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0066AD" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="4" />
+                </svg>
+            </div>
+            <input type="password" #passForm name="pass" class="form-input-text  max-input" autocomplete="off" placeholder="Ingrese Contraseña" #pass="ngModel" [(ngModel)]="administratorModel.pass">
+        </div>
+        <div class="inputs-form-ctn">
+            <div class="inputs-datosp-ctn">
+                <label for="" class="form-label-edit">Confirmar Clave:</label>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-point" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0066AD" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="4" />
+                </svg>
+            </div>
+            <input type="password" #cpassForm name="cpass" class="form-input-text  max-input" autocomplete="off" placeholder="Ingrese Contraseña Nuevamente" [(ngModel)]="cpass">
+        </div>
+        <div class="inputs-form-ctn">
+            <div class="inputs-datosp-ctn">
+                <label for="" class="form-label-edit">Pregunta de Seguridad:</label>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-point" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0066AD" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="4" />
+                </svg>
+            </div>
+            <select class="form-input-text  max-input" >
+                <option value="value 1">Pregunta 1</option>
+                <option value="value 2">Pregunta 2</option>
+                <option value="value 3">Pregunta 3</option>
+            </select> 
+        </div>
+        <div class="inputs-form-ctn">
+            <div class="inputs-datosp-ctn">
+                <label for="" class="form-label-edit">Rfechas_especialesuesta de Seguridad:</label>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-point" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0066AD" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="4" />
+                </svg>
+            </div>
+            <input type="text" #respuestaForm name="respuesta" class="form-input-text  max-input" autocomplete="off" placeholder="Ingrese Respuesta de Seguridad" #rfechas_especialesuesta="ngModel" [(ngModel)]="administratorModel.respuesta">
+        </div>
+        <div class="edit-admin-form-title-ctn">
+            <h1 class="edit-admin-form-title">
+                Permisos
+            </h1> 
+        </div>
+
+        <div class="permisos-ctn">
+            <p-accordion class="prueba" >
+                <p-accordionTab header="Registro de empleado">
+                    <ul class="links-menu-ctn">
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="empleado_activo" name="empleado_activo" #empleado_activo="ngModel" [(ngModel)]="permitsEmployee.empleado_activo">
+                            <label class="title-item" for="empleado_activo">Empleados Activos</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="empleado_inactivo" name="empleado_inactivo" #empleado_inactivo="ngModel" [(ngModel)]="permitsEmployee.empleado_inactivo">
+                            <label class="title-item" for="empleado_inactivo" >Empleados Inactivos</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="nuevo_empleado" name="nuevo_empleado" #nuevo_empleado="ngModel" [(ngModel)]="permitsEmployee.nuevo_empleado">
+                            <label class="title-item" for="nuevo_empleado" >Nuevo Empleado</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="acc-total-emp" name="acc-total-emp" #totalAccesEmployee >
+                            <label class="title-item" for="acc-total-emp" >Acceso total al módulo</label>
+                        </li>
+                    </ul>
+                </p-accordionTab>
+            </p-accordion>
+            <p-accordion class="prueba" >
+                <p-accordionTab header="Administrador">
+                    <ul class="links-menu-ctn">
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="nuevo_administrador" name="nuevo_administrador" #nuevo_administrador="ngModel" [(ngModel)]="permitsAdministrator.nuevo_administrador">
+                            <label class="title-item"  for="nuevo_administrador">Nuevo Administrador</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="lista_usuario" name="lista_usuario" #lista_usuario="ngModel" [(ngModel)]="permitsAdministrator.lista_usuario">
+                            <label class="title-item" for="lista_usuario" >Lista de Usuarios</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="logs" name="logs" #logs="ngModel" [(ngModel)]="permitsAdministrator.logs">
+                            <label class="title-item" for="logs" >Logs Acces</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="assets" name="assets" #assets="ngModel" [(ngModel)]="permitsAdministrator.assets">
+                            <label class="title-item" for="assets" >Assets</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="acc-total-administrador" name="acc-total-administrador" #totalAccesAdministrator>
+                            <label class="title-item" for="acc-total-administrador" >Acceso total al módulo</label>
+                        </li>
+                    </ul>
+                </p-accordionTab>
+            </p-accordion>
+            <p-accordion class="prueba" >
+                <p-accordionTab header="Vacaciones">
+                    <ul class="links-menu-ctn">
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="carga_vacaciones" name="carga_vacaciones" #carga_vacaciones="ngModel" [(ngModel)]="permitsHolidays.carga_vacaciones">
+                            <label class="title-item" for="carga_vacaciones" >Carga de Vacaciones</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="listado_vacaciones" name="listado_vacaciones" #listado_vacaciones="ngModel" [(ngModel)]="permitsHolidays.listado_vacaciones">
+                            <label class="title-item" for="listado_vacaciones" >Listados de Vacaciones</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="vacaciones_gozadas" name="vacaciones_gozadas" #vacaciones_gozadas="ngModel" [(ngModel)]="permitsHolidays.vacaciones_gozadas">
+                            <label class="title-item" for="vacaciones_gozadas" >Vacaciones Gozadas</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="acc-total-vacaciones" name="acc-total-vacaciones" #totalAccesHolidays >
+                            <label class="title-item" for="acc-total-vacaciones" >Acceso total al módulo</label>
+                        </li>
+                    </ul>
+                </p-accordionTab>
+            </p-accordion>
+            <p-accordion class="prueba" >
+                <p-accordionTab header="Novedades">
+                    <ul class="links-menu-ctn">
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="car-gral" name="car-gral" #carga_general="ngModel" [(ngModel)]="permitsNews.carga_general">
+                            <label class="title-item" for="car-gral">Carga General</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="premios" name="premios" #premios="ngModel" [(ngModel)]="permitsNews.premios">
+                            <label class="title-item" for="premios">Premios</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="presentismo" name="presentismo" #presentismo="ngModel" [(ngModel)]="permitsNews.presentismo">
+                            <label class="title-item" for="presentismo">Presentismo</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="almuerzos" name="almuerzos" #almuerzo="ngModel" [(ngModel)]="permitsNews.almuerzo">
+                            <label class="title-item" for="almuerzos">Almuerzos</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="horas_extras" name="horas_extras" #horas_extras="ngModel" [(ngModel)]="permitsNews.horas_extras">
+                            <label class="title-item" for="horas_extras">Horas Extras</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="aceptacion_masivas" name="aceptacion_masivas" #aceptacion_masiva="ngModel" [(ngModel)]="permitsNews.aceptacion_masiva">
+                            <label class="title-item" for="aceptacion_masivas">Aceptación Masiva</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="dias_estudio" name="dias_estudio" #dias_estudio="ngModel" [(ngModel)]="permitsNews.dias_estudio">
+                            <label class="title-item" for="dias_estudio">Días de Estudio</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="licencias" name="licencias" #licencias="ngModel" [(ngModel)]="permitsNews.licencias">
+                            <label class="title-item" for="licencias">licenciascias</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="acc-total-novedades" name="acc-total-novedades" #totalAccesNews >
+                            <label class="title-item" for="acc-total-novedades" >Acceso total al módulo</label>
+                        </li>
+                    </ul>
+                </p-accordionTab>
+            </p-accordion>
+            <p-accordion class="prueba" >
+                <p-accordionTab header="Reportes">
+                    <ul class="links-menu-ctn">
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="novedades" name="novedades" #novedades="ngModel" [(ngModel)]="permitsReport.novedades">
+                            <label class="title-item" for="novedades" >Novedades</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="vacaciones" name="vacaciones"  #vacaciones="ngModel" [(ngModel)]="permitsReport.vacaciones">
+                            <label class="title-item" for="vacaciones" >Vacaciones</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="cumples" name="cumples"  #cumples="ngModel" [(ngModel)]="permitsReport.cumples">
+                            <label class="title-item" for="cumples" >Cumpleaños</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="acc-total-reportes" name="acc-total-reportes" #totalAccesReports>
+                            <label class="title-item" for="acc-total-reportes" >Acceso total al módulo</label>
+                        </li>
+                    </ul>
+                </p-accordionTab>
+            </p-accordion>
+            <p-accordion class="prueba" >
+                <p-accordionTab header="Varios">
+                    <ul class="links-menu-ctn">
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="indumentaria" name="indumentaria"  #indumentaria="ngModel" [(ngModel)]="permitsVarious.indumentaria">
+                            <label class="title-item" for="indumentaria" >Indumentarias</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="recibos_sueldo" name="recibos_sueldo" #recibos_sueldo="ngModel" [(ngModel)]="permitsVarious.recibos_sueldo">
+                            <label class="title-item" for="recibos_sueldo" >Recibos de Sueldo</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="fechaa_especiales" name="fecha_especiales" #fecha_especiales="ngModel" [(ngModel)]="permitsVarious.fecha_especiales">
+                            <label class="title-item" for="fecha_especiales" >Fechas Especiales</label>
+                        </li>
+                        <li class="link-menu-ctn">
+                            <input type="checkbox" id="acc-total-varios" name="acc-total-varios" #totalAccesVarious>
+                            <label class="title-item" for="acc-total-varios" >Acceso total al módulo</label>
+                        </li>
+                    </ul>
+                </p-accordionTab>
+            </p-accordion>
+            <div class="prueba">
+                <div class="acceso-total-ctn">
+                    <input type="checkbox" id="acc-total" name="acc-total" #totalAccesModule >
+                    <label class="title-item" for="acc-total">Acceso total a todos los módulos</label>
+                </div>                
+            </div>                     
+        </div>
+        
+
+    </form>
+    
+    <div class="form-btns-ctn">
+        <button type="submit" (click)="sendAdministrator()"  class="btn-blue">Agregar</button>
+    </div>
+
+    <div class="form-legend-ctn">
+        <p class="form-legend-text">
+            Los nombres de los inputs que estan acompañados por el icono: <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-point" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0066AD" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="12" cy="12" r="4" />
+                    </svg>
+                </span>
+            son obligatorios.
+        </p>
+    </div>
+
+</div>

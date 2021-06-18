@@ -1,0 +1,33 @@
+<div class="title-and-navbar-ctn">
+	<app-title
+			[title]="'Lista de Administradores'"
+	></app-title>
+</div>
+<app-modal-custom
+            [dataModal] = "dataModal"
+>
+</app-modal-custom>
+
+<div class="grid-table-ctn">
+    <div class="cabecera-grig-table-ctn">
+        <ul class="cabecera-table-ctn">
+					<li class="cabecera-item-ctn" *ngFor="let title of headersList"  ><div class="cabecera-item"> {{title}} </div></li>
+         </ul>
+    </div>
+    <div class="contenido-grid-table-ctn">
+        <ul class="contenido-table-ctn" *ngFor="let item of administratorList">
+					<li class="contenido-item-ctn mediano"><div class="contenido-item">{{item.usuario}}</div></li>
+					<li class="contenido-item-ctn mediano"><div class="contenido-item">{{item.nombre}}</div></li>
+					<li class="contenido-item-ctn mediano"><div class="contenido-item">{{item.apellido}}</div></li>
+					<li class="contenido-item-ctn mediano"><div class="contenido-item">{{item.fecha_activo}}</div></li>
+					<li class="contenido-item-ctn mediano"><div class="contenido-item">{{item.hora_activo}}</div></li>
+					<li class="contenido-item-ctn grande"><div class="contenido-item">{{item.correo}}</div></li>
+          <li class="contenido-item-ctn pequenio" (click)="eventEditField(item.id)">
+              <div class="contenido-item"><div class="icon-id-card-o tooltip"><span class="tooltiptext">Ver / Editar</span></div></div>
+          </li>
+        </ul>
+    </div> 
+</div>
+
+
+
